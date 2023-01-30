@@ -60,7 +60,7 @@ class _SignInState extends State<SignIn> {
                         }),
                      Text("Remember me",
                         style: TextStyle(
-                          color: AppColor.textfieldColor,
+                          color: AppColor.textFieldColor,
                           fontSize: 14.sp,
                         ))
                   ],
