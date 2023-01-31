@@ -1,19 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobile_financing_app_ui/const/app_color.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../../widgets/custom_clip_path.dart';
-import '../../Loan Product/loan_product.dart';
+import '../../const/app_color.dart';
+import '../../widgets/custom_clip_path.dart';
+import '../Partnership/partnership_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class LoanProduct extends StatefulWidget {
+  const LoanProduct({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<LoanProduct> createState() => _LoanProductState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _LoanProductState extends State<LoanProduct> {
+  List<String> images = [
+    "assets/partnershipe.png",
+    "assets/business.png",
+    "assets/personal.png",
+    "assets/electronicloan.png",
+  ];
+  List<String> title = [
+    "Partnership",
+    "Business Loan",
+    "Personal Loan",
+    "Electronic Loan ",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -70,22 +83,22 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 15,
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0).w,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children: const [
+                                children:  [
                                   Text(
                                     "Request Amount",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 20.sp,
                                     ),
                                   ),
                                   Text(
                                     "R2887.65",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                                      fontSize: 20.sp,
                                     ),
                                   ),
                                 ],
@@ -127,18 +140,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 Column(
                                   children: [
-                                    GestureDetector(
-                                      onTap: ()=>const LoanProduct().launch(context),
-                                      child: Container(
-                                          width: 44.w,
-                                          height: 44.h,
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10).r,
-                                              color: const Color(0xff0B0657)),
-                                          child: const Icon(Icons.payment,
-                                              color: Colors.white)),
-                                    ),
+                                    Container(
+                                        width: 44.w,
+                                        height: 44.h,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10).r,
+                                            color: const Color(0xff0B0657)),
+                                        child: const Icon(Icons.payment,
+                                            color: Colors.white)),
                                     Text(
                                       "Loan Products",
                                       style: TextStyle(
@@ -175,94 +185,56 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 55.0.h,
+                  height: 80.0.h,
                 ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Transactions",
-                            style: TextStyle(
-                                color: AppColor.primaryColor,
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.all(10.0).w,
+                  child: GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: 4,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 10,
+                        crossAxisSpacing: 10,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: 116.01.w,
+                          height: 116.01.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(23.88).r,
+                            color: const Color(0xffEBEBEB),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: const Offset(
+                                    0, 3), // changes position of shadow
+                              ),
+                            ],
                           ),
-                          Text(
-                            "See all",
-                            style: TextStyle(
-                                color: const Color(0xffFE6310),
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.bold),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                images[index],
+                                color: Colors.black,
+                                width: 50,
+                              ),
+                              SizedBox(height: 4.0.h,),
+                              Text(title[index])
+                            ],
                           ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    ListTile(
-                      leading: Image.asset("assets/ntt.jpg"),
-                      title: const Text(
-                        "NTT Inc.",
-                        style: TextStyle(
-                            color: AppColor.primaryColor,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: const Text("25 OCT 2021 12:22"),
-                      trailing: Text(
-                        "5.81",
-                        style: TextStyle(
-                            color: AppColor.primaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.sp),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.0.h,
-                    ),
-                    ListTile(
-                      leading: Image.asset("assets/ntt.jpg"),
-                      title: const Text(
-                        "OpenStuck.",
-                        style: TextStyle(
-                            color: AppColor.primaryColor,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: const Text("21 OCT 2021 12:22"),
-                      trailing: Text(
-                        "3.81",
-                        style: TextStyle(
-                            color: AppColor.primaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.sp),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.0.h,
-                    ),
-                    ListTile(
-                      leading: Image.asset("assets/ntt.jpg"),
-                      title: const Text(
-                        "Netflix.",
-                        style: TextStyle(
-                            color: AppColor.primaryColor,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: const Text("25 OCT 2021 12:20"),
-                      trailing: Text(
-                        "15.81",
-                        style: TextStyle(
-                            color: AppColor.primaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.sp),
-                      ),
-                    ),
-                  ],
-                )
+                        );
+                      }),
+                ).onTap(()=>PartnershipScreen().launch(context)),
+                SizedBox(
+                  height: 40.0.h,
+                ),
               ],
             ),
           )),
