@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mobile_financing_app_ui/screens/Home%20Screen/bottom%20pages/history.dart';
 import 'package:mobile_financing_app_ui/screens/Home%20Screen/bottom%20pages/profile.dart';
@@ -43,11 +44,20 @@ class _NavBarState extends State<NavBar> {
         items: [
           BottomNavigationBarItem(
               icon: Container(
-                  width: 50,
-                  height: 50,
+                  width: 40.w,
+                  height: 40.h,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
                   child: Icon(
                     Icons.home_max_outlined,
                     color: AppColor.primaryColor,
@@ -56,10 +66,20 @@ class _NavBarState extends State<NavBar> {
               backgroundColor: AppColor.primaryColor),
           BottomNavigationBarItem(
             icon: Container(
-                width: 50,
-                height: 50,
+                width: 40.w,
+                height: 40.h,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5), color: Colors.grey),
+                  borderRadius: BorderRadius.circular(5).r,
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                ),
                 child: Icon(
                   Icons.history,
                   color: AppColor.primaryColor,
@@ -68,11 +88,20 @@ class _NavBarState extends State<NavBar> {
           ),
           BottomNavigationBarItem(
               icon: Container(
-                  width: 50,
-                  height: 50,
+                  width: 40.w,
+                  height: 40.h,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey),
+                    borderRadius: BorderRadius.circular(5).r,
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
                   child: Icon(
                     Icons.report,
                     color: AppColor.primaryColor,
@@ -80,11 +109,20 @@ class _NavBarState extends State<NavBar> {
               label: "Report"),
           BottomNavigationBarItem(
               icon: Container(
-                  width: 50,
-                  height: 50,
+                  width: 40.w,
+                  height: 40.h,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey),
+                    borderRadius: BorderRadius.circular(5).r,
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
                   child: Icon(
                     Icons.person,
                     color: AppColor.primaryColor,

@@ -22,9 +22,167 @@ class _HomeScreenState extends State<HomeScreen> {
           body: SingleChildScrollView(
             child: Column(
               children: [
+                // orginal
+                // Stack(
+                //   clipBehavior: Clip.none,
+                //   alignment: Alignment.bottomCenter,
+                //   children: [
+                //     Container(
+                //       alignment: Alignment.center,
+                //       child: ClipPath(
+                //         clipper: ClipPathClass(),
+                //         child: SizedBox(
+                //             width: double.infinity,
+                //             height: MediaQuery.of(context).size.height / 2.90,
+                //             child: Container(
+                //               color: AppColor.primaryColor,
+                //             )),
+                //       ),
+                //     ),
+                //     Positioned(
+                //       bottom: -50,
+                //       child: Container(
+                //         height: 172,
+                //         width: 327,
+                //         decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10.0),
+                //           color: Colors.white,
+                //           boxShadow: const [
+                //             BoxShadow(
+                //                 color: Colors.grey,
+                //                 offset: Offset(0, 8), // hide shadow top
+                //                 blurRadius: 5),
+                //             BoxShadow(
+                //               color: Colors
+                //                   .white, // replace with color of container
+                //               offset: Offset(-8, 0), // hide shadow right
+                //             ),
+                //             BoxShadow(
+                //               color: Colors
+                //                   .white, // replace with color of container
+                //               offset: Offset(8, 0), // hide shadow left
+                //             ),
+                //           ],
+                //         ),
+                //         child: Column(
+                //           mainAxisAlignment: MainAxisAlignment.start,
+                //           children: [
+                //             const SizedBox(
+                //               height: 15,
+                //             ),
+                //             Padding(
+                //               padding: const EdgeInsets.all(8.0),
+                //               child: Row(
+                //                 mainAxisAlignment:
+                //                     MainAxisAlignment.spaceBetween,
+                //                 children: const [
+                //                   Text(
+                //                     "Request Amount",
+                //                     style: TextStyle(
+                //                       fontSize: 20,
+                //                     ),
+                //                   ),
+                //                   Text(
+                //                     "R2887.65",
+                //                     style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 20,
+                //                     ),
+                //                   ),
+                //                 ],
+                //               ),
+                //             ),
+                //             Padding(
+                //               padding: const EdgeInsets.all(8.0).w,
+                //               child: const Divider(
+                //                 thickness: 3.0,
+                //                 color: Color(
+                //                   0xffF2F2F2,
+                //                 ),
+                //               ),
+                //             ),
+                //             SizedBox(
+                //               height: 10.0.h,
+                //             ),
+                //             Row(
+                //               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //               children: [
+                //                 Column(
+                //                   children: [
+                //                     Container(
+                //                         width: 44.w,
+                //                         height: 44.h,
+                //                         decoration: BoxDecoration(
+                //                             borderRadius:
+                //                                 BorderRadius.circular(10).r,
+                //                             color: const Color(0xff0B0657)),
+                //                         child: const Icon(Icons.payment,
+                //                             color: Colors.white)),
+                //                     Text(
+                //                       "Payments",
+                //                       style: TextStyle(
+                //                           fontSize: 14.sp,
+                //                           color: const Color(0xff100D40)),
+                //                     )
+                //                   ],
+                //                 ),
+                //                 Column(
+                //                   children: [
+                //                     GestureDetector(
+                //                       onTap: () =>
+                //                           const LoanProduct().launch(context),
+                //                       child: Container(
+                //                           width: 44.w,
+                //                           height: 44.h,
+                //                           decoration: BoxDecoration(
+                //                               borderRadius:
+                //                                   BorderRadius.circular(10).r,
+                //                               color: const Color(0xff0B0657)),
+                //                           child: const Icon(Icons.payment,
+                //                               color: Colors.white)),
+                //                     ),
+                //                     Text(
+                //                       "Loan Products",
+                //                       style: TextStyle(
+                //                           fontSize: 14.sp,
+                //                           color: const Color(0xff100D40)),
+                //                     )
+                //                   ],
+                //                 ),
+                //                 Column(
+                //                   children: [
+                //                     Container(
+                //                         width: 44.w,
+                //                         height: 44.h,
+                //                         decoration: BoxDecoration(
+                //                             borderRadius:
+                //                                 BorderRadius.circular(10).r,
+                //                             color: const Color(0xff0B0657)),
+                //                         child: const Icon(Icons.payment,
+                //                             color: Colors.white)),
+                //                     Text(
+                //                       "BillPay",
+                //                       style: TextStyle(
+                //                           fontSize: 14.sp,
+                //                           color: const Color(0xff100D40)),
+                //                     )
+                //                   ],
+                //                 ),
+                //               ],
+                //             )
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
+
+                ////////////////////////////////
+
                 Stack(
                   clipBehavior: Clip.none,
-                  alignment: Alignment.bottomCenter,
+                  // alignment: Alignment.bottomCenter,
+
                   children: [
                     Container(
                       alignment: Alignment.center,
@@ -38,13 +196,41 @@ class _HomeScreenState extends State<HomeScreen> {
                             )),
                       ),
                     ),
+
                     Positioned(
-                      bottom: -50,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 30.0).r,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Welcome Back",
+                                    style: TextStyle(color: Colors.white,fontSize: 14.sp),
+                                  ),
+                                  SizedBox(height: 5.0.h,),
+                                  Text(
+                                    "Alexander Michael",
+                                    style: TextStyle(color: Colors.white,fontSize: 14.sp),
+                                  ),
+                                ],
+                              ),
+                              Icon(Icons.menu_rounded,color: Colors.white,)
+                            ],
+                          ),
+                        )),
+                    Positioned(
+                      bottom: -50.0,
+                      left: 20.0,
+                      right: 20.0,
+
                       child: Container(
                         height: 172,
                         width: 327,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
+                          borderRadius: BorderRadius.circular(10.0).r,
                           color: Colors.white,
                           boxShadow: const [
                             BoxShadow(
@@ -73,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                MainAxisAlignment.spaceBetween,
                                 children: const [
                                   Text(
                                     "Request Amount",
@@ -101,7 +287,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             SizedBox(
-                              height: 10.0.h,
+                              height: 5.0.h,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -113,7 +299,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         height: 44.h,
                                         decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(10).r,
+                                            BorderRadius.circular(10).r,
                                             color: const Color(0xff0B0657)),
                                         child: const Icon(Icons.payment,
                                             color: Colors.white)),
@@ -128,13 +314,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Column(
                                   children: [
                                     GestureDetector(
-                                      onTap: ()=>const LoanProduct().launch(context),
+                                      onTap: () =>
+                                          const LoanProduct().launch(context),
                                       child: Container(
                                           width: 44.w,
                                           height: 44.h,
                                           decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10).r,
+                                              BorderRadius.circular(10).r,
                                               color: const Color(0xff0B0657)),
                                           child: const Icon(Icons.payment,
                                               color: Colors.white)),
@@ -154,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         height: 44.h,
                                         decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(10).r,
+                                            BorderRadius.circular(10).r,
                                             color: const Color(0xff0B0657)),
                                         child: const Icon(Icons.payment,
                                             color: Colors.white)),
@@ -171,9 +358,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
+
                 SizedBox(
                   height: 55.0.h,
                 ),

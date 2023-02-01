@@ -37,7 +37,6 @@ class _LoanProductState extends State<LoanProduct> {
               children: [
                 Stack(
                   clipBehavior: Clip.none,
-                  alignment: Alignment.bottomCenter,
                   children: [
                     Container(
                       alignment: Alignment.center,
@@ -51,13 +50,31 @@ class _LoanProductState extends State<LoanProduct> {
                             )),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 30.0).r,
+                      child: Positioned(
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                                onTap: (){
+                                  finish(context);
+                                },
+                                child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+                            SizedBox(width: 100.0.w,),
+                            Text("Loan Products",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16.sp),)
+                          ],
+                        ),
+                      ),
+                    ),
                     Positioned(
-                      bottom: -50,
+                      bottom: -50.0,
+                      left: 20.0,
+                      right: 20.0,
                       child: Container(
                         height: 172,
                         width: 327,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
+                          borderRadius: BorderRadius.circular(10.0).r,
                           color: Colors.white,
                           boxShadow: const [
                             BoxShadow(
@@ -87,7 +104,7 @@ class _LoanProductState extends State<LoanProduct> {
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                children:  [
+                                children: [
                                   Text(
                                     "Request Amount",
                                     style: TextStyle(
@@ -114,7 +131,7 @@ class _LoanProductState extends State<LoanProduct> {
                               ),
                             ),
                             SizedBox(
-                              height: 10.0.h,
+                              height: 5.0.h,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -225,13 +242,15 @@ class _LoanProductState extends State<LoanProduct> {
                                 color: Colors.black,
                                 width: 50,
                               ),
-                              SizedBox(height: 4.0.h,),
+                              SizedBox(
+                                height: 4.0.h,
+                              ),
                               Text(title[index])
                             ],
                           ),
                         );
                       }),
-                ).onTap(()=>PartnershipScreen().launch(context)),
+                ).onTap(() => PartnershipScreen().launch(context)),
                 SizedBox(
                   height: 40.0.h,
                 ),
