@@ -29,7 +29,7 @@ class _ContactDetailsState extends State<ContactDetails> {
                 height: 20.0.h,
               ),
               Text("Contact Details:",style: TextStyle(color: AppColor.primaryColor,fontWeight: FontWeight.bold,fontSize: 16.sp),),
-              SizedBox(height: 20.0,),
+              SizedBox(height: 20.0.h,),
               Text("Email",style: TextStyle(color: AppColor.primaryColor,fontSize: 14.0.sp,fontWeight: FontWeight.bold),),
               SizedBox(height: 5.0.h,),
               AppTextField(
