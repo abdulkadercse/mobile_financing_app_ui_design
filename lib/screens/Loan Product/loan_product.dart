@@ -4,6 +4,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../const/app_color.dart';
 import '../../widgets/custom_clip_path.dart';
+import '../Bill Payment Screen/bill_payment_screen.dart';
 import '../Partnership/partnership_screen.dart';
 
 class LoanProduct extends StatefulWidget {
@@ -154,7 +155,7 @@ class _LoanProductState extends State<LoanProduct> {
                                           color: const Color(0xff100D40)),
                                     )
                                   ],
-                                ),
+                                ).onTap(()=>BillPaymentScreen().launch(context)),
                                 Column(
                                   children: [
                                     Container(
@@ -192,7 +193,7 @@ class _LoanProductState extends State<LoanProduct> {
                                           color: const Color(0xff100D40)),
                                     )
                                   ],
-                                ),
+                                ).onTap(()=>const BillPaymentScreen().launch(context)),
                               ],
                             )
                           ],
@@ -250,7 +251,7 @@ class _LoanProductState extends State<LoanProduct> {
                           ),
                         );
                       }),
-                ).onTap(() => PartnershipScreen().launch(context)),
+                ).onTap(() => const PartnershipScreen().launch(context)),
                 SizedBox(
                   height: 40.0.h,
                 ),

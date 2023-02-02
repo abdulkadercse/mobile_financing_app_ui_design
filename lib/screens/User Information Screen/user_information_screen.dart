@@ -19,7 +19,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
   List<String> maritalStatus = ['Single', 'Married'];
   String initialMaritalStatus = 'Single';
 
-  DropdownButton<String> getLanguages() {
+  DropdownButton<String> getMaritalStatus() {
     List<DropdownMenuItem<String>> dropDownItems = [];
     for (String des in maritalStatus) {
       var item = DropdownMenuItem(
@@ -220,7 +220,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                     height: 55,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 5.0),
-                      child: DropdownButtonHideUnderline(child: getLanguages()),
+                      child: DropdownButtonHideUnderline(child: getMaritalStatus()),
                     ),
                   ),
                 ),

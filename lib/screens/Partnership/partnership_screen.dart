@@ -46,7 +46,7 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0).r,
                 color: Colors.white,
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       color: Colors.black54,
                       blurRadius: 15.0,
