@@ -49,14 +49,11 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
                 boxShadow: const [
                   BoxShadow(
                       color: Colors.black54,
-                      blurRadius: 15.0,
+                      blurRadius: 5,
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: const Icon(
-                Icons.menu_rounded,
-                color: AppColor.primaryColor,
-              ),
+              child: Image.asset("assets/menu-bar.png",),
             ),
           )
         ],

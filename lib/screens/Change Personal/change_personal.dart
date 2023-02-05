@@ -57,10 +57,7 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: const Icon(
-                Icons.menu_rounded,
-                color: AppColor.primaryColor,
-              ),
+              child: Image.asset("assets/menu-bar.png",),
             ),
           )
         ],

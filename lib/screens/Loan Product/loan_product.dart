@@ -60,7 +60,7 @@ class _LoanProductState extends State<LoanProduct> {
                                 onTap: (){
                                   finish(context);
                                 },
-                                child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+                                child: const Icon(Icons.arrow_back_ios,color: Colors.white,)),
                             SizedBox(width: 100.0.w,),
                             Text("Loan Products",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16.sp),)
                           ],
@@ -155,7 +155,7 @@ class _LoanProductState extends State<LoanProduct> {
                                           color: const Color(0xff100D40)),
                                     )
                                   ],
-                                ).onTap(()=>BillPaymentScreen().launch(context)),
+                                ).onTap(()=>const BillPaymentScreen().launch(context)),
                                 Column(
                                   children: [
                                     Container(

@@ -23,7 +23,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
         backgroundColor: AppColor.mainColor,
         elevation: 0,
         title: const Text(
-          "Change Personal Profile",
+          "Change email address",
           style:
               TextStyle(color: Color(0xff100D40), fontWeight: FontWeight.bold),
         ),
@@ -51,14 +51,11 @@ class _ChangeEmailState extends State<ChangeEmail> {
                 boxShadow: const [
                   BoxShadow(
                       color: Colors.black54,
-                      blurRadius: 15.0,
+                      blurRadius: 5,
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: const Icon(
-                Icons.menu_rounded,
-                color: AppColor.primaryColor,
-              ),
+              child: Image.asset("assets/menu-bar.png",),
             ),
           )
         ],

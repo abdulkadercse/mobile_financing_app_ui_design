@@ -36,6 +36,7 @@ dependencies:
   nb_utils: ^5.0.0
   font_awesome_flutter: ^10.3.0
   google_fonts: ^4.0.1
+  lottie: ^2.2.0
 
 
 

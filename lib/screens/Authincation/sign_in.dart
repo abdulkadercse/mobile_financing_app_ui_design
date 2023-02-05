@@ -7,6 +7,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../const/appTextFieldDecoration.dart';
 import '../../const/button_decoration.dart';
 import '../../widgets/custom_button.dart';
+import 'forget_password.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -71,7 +72,7 @@ class _SignInState extends State<SignIn> {
                       color: AppColor.primaryColor,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold),
-                )
+                ).onTap(()=>const ForgotPassword().launch(context))
               ],
             ),
             SizedBox(
