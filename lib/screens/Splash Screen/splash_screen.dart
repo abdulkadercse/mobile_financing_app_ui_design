@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../const/app_color.dart';
-import '../Authincation/sign_in.dart';
+import '../Authincation/welcome.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future<void> goToHomeScreen() async {
     Future.delayed(const Duration(seconds: 5)).then((value) => {
-          SignIn().launch(context, isNewTask: true),
+          const SignIn().launch(context, isNewTask: true),
         });
   }
 
@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: CircleAvatar(
           backgroundColor: AppColor.primaryColor,
-          radius: 70.0,
+          radius: 70.0.r,
           child: Text(
             "Financing App",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0.sp),

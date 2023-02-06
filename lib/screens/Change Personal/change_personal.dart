@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -15,7 +16,6 @@ class ChangePersonalProfile extends StatefulWidget {
 }
 
 class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
-
   TextEditingController dateOfBirthController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
         title: const Text(
           "Change Personal Profile",
           style:
-          TextStyle(color: Color(0xff100D40), fontWeight: FontWeight.bold),
+              TextStyle(color: Color(0xff100D40), fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         leading: GestureDetector(
@@ -57,7 +57,9 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: Image.asset("assets/menu-bar.png",),
+              child: Image.asset(
+                "assets/menu-bar.png",
+              ),
             ),
           )
         ],
@@ -101,8 +103,11 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
                 controller: dateOfBirthController,
                 textFieldType: TextFieldType.NAME,
                 decoration: appTextDecoration.copyWith(
-                    hintText:  DateTime.now().toString().substring(0, 10),
-                    suffixIcon: Icon(Icons.calendar_month,size: 40.sp,).onTap(()  async {
+                    hintText: DateTime.now().toString().substring(0, 10),
+                    suffixIcon: Icon(
+                      Icons.calendar_month,
+                      size: 40.sp,
+                    ).onTap(() async {
                       var date = await showDatePicker(
                         context: context,
                         initialDate: DateTime.now(),
@@ -110,7 +115,8 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
                         lastDate: DateTime.now(),
                       );
                       setState(() {
-                        dateOfBirthController.text = date.toString().substring(0,10);
+                        dateOfBirthController.text =
+                            date.toString().substring(0, 10);
                       });
                     })),
               ),
@@ -130,9 +136,12 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
               AppTextField(
                 textFieldType: TextFieldType.NAME,
                 decoration: appTextDecoration.copyWith(
-                    hintText: "2910 Makati", prefixIcon: const Icon(Icons.location_on_outlined)),
+                    hintText: "2910 Makati",
+                    prefixIcon: const Icon(Icons.location_on_outlined)),
               ),
-              SizedBox(height: 20.0.h,),
+              SizedBox(
+                height: 20.0.h,
+              ),
               Text(
                 "Description",
                 style: TextStyle(
@@ -144,17 +153,18 @@ class _ChangePersonalProfileState extends State<ChangePersonalProfile> {
                 height: 10.h,
               ),
               AppTextField(
-                textFieldType: TextFieldType.ADDRESS,
-                decoration: appTextDecoration
-
+                  textFieldType: TextFieldType.ADDRESS,
+                  decoration: appTextDecoration),
+              SizedBox(
+                height: 20.0.h,
               ),
-              SizedBox(height: 20.0.h,),
-
               CustomButton(
                 buttonText: 'Save Email',
                 buttonDecoration: buttonDecoration,
                 buttonTextColor: Colors.white,
-                onPressed: null,
+                onPressed: () {
+                  EasyLoading.showSuccess('Success!');
+                },
               )
             ],
           ),

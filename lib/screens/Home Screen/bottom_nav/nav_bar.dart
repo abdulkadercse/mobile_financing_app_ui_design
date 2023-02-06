@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mobile_financing_app_ui/screens/Home%20Screen/bottom%20pages/history.dart';
 import 'package:mobile_financing_app_ui/screens/Home%20Screen/bottom%20pages/profile.dart';
 import 'package:mobile_financing_app_ui/screens/Home%20Screen/bottom%20pages/reports.dart';
@@ -54,11 +53,12 @@ class _NavBarState extends State<NavBar> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.home_max_outlined,
                     color: AppColor.primaryColor,
                   )),
@@ -76,11 +76,11 @@ class _NavBarState extends State<NavBar> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
+                      offset: const Offset(0, 3), // changes position of shadow
                     ),
                   ],
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.history,
                   color: AppColor.primaryColor,
                 )),
@@ -98,11 +98,12 @@ class _NavBarState extends State<NavBar> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.report,
                     color: AppColor.primaryColor,
                   )),
@@ -119,11 +120,12 @@ class _NavBarState extends State<NavBar> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.person,
                     color: AppColor.primaryColor,
                   )),

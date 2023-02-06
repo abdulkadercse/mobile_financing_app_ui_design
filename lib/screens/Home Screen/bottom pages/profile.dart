@@ -300,7 +300,8 @@ class _ProfileState extends State<Profile> {
                           ],
                         ),
                       ),
-                    ).onTap(()=>const ChangePersonalProfile().launch(context)),
+                    ).onTap(
+                        () => const ChangePersonalProfile().launch(context)),
                     SizedBox(
                       height: 10.0.h,
                     ),
@@ -356,7 +357,7 @@ class _ProfileState extends State<Profile> {
                           ],
                         ),
                       ),
-                    ).onTap(()=>const ChangeEmail().launch(context)),
+                    ).onTap(() => const ChangeEmail().launch(context)),
                     SizedBox(
                       height: 10.0.h,
                     ),
@@ -412,7 +413,7 @@ class _ProfileState extends State<Profile> {
                           ],
                         ),
                       ),
-                    ).onTap(()=>const ChangePassword().launch(context)),
+                    ).onTap(() => const ChangePassword().launch(context)),
                     SizedBox(
                       height: 10.0.h,
                     ),

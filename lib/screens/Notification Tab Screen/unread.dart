@@ -30,7 +30,6 @@ class _UnReadState extends State<UnRead> {
                       blurRadius: 15.0,
                       offset: Offset(0.0, 0.75))
                 ],
-
               ),
               child: Row(
                 children: [
@@ -45,7 +44,9 @@ class _UnReadState extends State<UnRead> {
                       child: const Icon(Icons.message),
                     ),
                   ),
-                  SizedBox(width: 10.w,),
+                  SizedBox(
+                    width: 10.w,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,

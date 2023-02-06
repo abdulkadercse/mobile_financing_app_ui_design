@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'app_color.dart';
 
-final  appTextDecoration = InputDecoration(
+const  appTextDecoration = InputDecoration(
     hintStyle: TextStyle(color: AppColor.textFieldColor),
     fillColor: Colors.white,
     filled: true,

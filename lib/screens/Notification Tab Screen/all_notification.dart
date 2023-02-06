@@ -22,15 +22,14 @@ class _AllNotificationState extends State<AllNotification> {
               width: 327.w,
               height: 102.h,
               decoration: BoxDecoration(
-                  color: const Color(0xffF5F5F5),
-                  borderRadius: BorderRadius.circular(10).r,
+                color: const Color(0xffF5F5F5),
+                borderRadius: BorderRadius.circular(10).r,
                 boxShadow: const [
                   BoxShadow(
                       color: Colors.black54,
                       blurRadius: 15.0,
                       offset: Offset(0.0, 0.75))
                 ],
-
               ),
               child: Row(
                 children: [
@@ -45,7 +44,9 @@ class _AllNotificationState extends State<AllNotification> {
                       child: const Icon(Icons.message),
                     ),
                   ),
-                  SizedBox(width: 10.w,),
+                  SizedBox(
+                    width: 10.w,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,

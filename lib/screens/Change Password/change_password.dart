@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -25,7 +26,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         title: const Text(
           "Password",
           style:
-          TextStyle(color: Color(0xff100D40), fontWeight: FontWeight.bold),
+              TextStyle(color: Color(0xff100D40), fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         leading: GestureDetector(
@@ -55,7 +56,9 @@ class _ChangePasswordState extends State<ChangePassword> {
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: Image.asset("assets/menu-bar.png",),
+              child: Image.asset(
+                "assets/menu-bar.png",
+              ),
             ),
           )
         ],
@@ -117,14 +120,19 @@ class _ChangePasswordState extends State<ChangePassword> {
               AppTextField(
                 textFieldType: TextFieldType.PASSWORD,
                 decoration: appTextDecoration.copyWith(
-                    hintText: "Re-password new password", prefixIcon: const Icon(Icons.lock)),
+                    hintText: "Re-password new password",
+                    prefixIcon: const Icon(Icons.lock)),
               ),
-              SizedBox(height: 20.0.h,),
+              SizedBox(
+                height: 20.0.h,
+              ),
               CustomButton(
                 buttonText: 'Change Password',
                 buttonDecoration: buttonDecoration,
                 buttonTextColor: Colors.white,
-                onPressed: null,
+                onPressed: () {
+                  EasyLoading.showSuccess('Success!');
+                },
               )
             ],
           ),

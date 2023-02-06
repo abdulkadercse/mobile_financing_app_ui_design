@@ -15,8 +15,6 @@ class History extends StatefulWidget {
 class _HistoryState extends State<History> {
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
@@ -27,8 +25,8 @@ class _HistoryState extends State<History> {
             backgroundColor: AppColor.mainColor,
             title: const Text(
               "Notification",
-              style:
-              TextStyle(color: Color(0xff100D40), fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Color(0xff100D40), fontWeight: FontWeight.bold),
             ),
             leading: GestureDetector(
                 onTap: () {
@@ -40,12 +38,12 @@ class _HistoryState extends State<History> {
                     Icons.arrow_back_ios,
                     color: AppColor.primaryColor,
                   ),
-
                 )),
             centerTitle: true,
             actions: [
               Padding(
-                padding: const EdgeInsets.only(right: 10.0, top: 8.0, bottom: 8.0),
+                padding:
+                    const EdgeInsets.only(right: 10.0, top: 8.0, bottom: 8.0),
                 child: Container(
                   width: 40.w,
                   height: 40.w,
@@ -59,8 +57,9 @@ class _HistoryState extends State<History> {
                           offset: Offset(0.0, 0.75))
                     ],
                   ),
-
-                  child: Image.asset("assets/menu-bar.png",),
+                  child: Image.asset(
+                    "assets/menu-bar.png",
+                  ),
                 ),
               )
             ],
@@ -68,37 +67,27 @@ class _HistoryState extends State<History> {
               indicatorWeight: 4,
               indicatorColor: Color(0xff100D40),
               tabs: [
-                Tab(icon: Text("All Notification",style: TextStyle(color: Colors.black),)),
-
-                Tab(icon: Text("Unread",style: TextStyle(color: Colors.black),)),
+                Tab(
+                    icon: Text(
+                  "All Notification",
+                  style: TextStyle(color: Colors.black),
+                )),
+                Tab(
+                    icon: Text(
+                  "Unread",
+                  style: TextStyle(color: Colors.black),
+                )),
               ],
             ),
           ),
           body: const TabBarView(
-
             children: [
               AllNotification(),
               UnRead(),
-
             ],
           ),
         ),
       ),
     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
 }

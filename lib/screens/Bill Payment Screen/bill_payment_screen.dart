@@ -53,7 +53,9 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: Image.asset("assets/menu-bar.png",),
+              child: Image.asset(
+                "assets/menu-bar.png",
+              ),
             ),
           )
         ],
@@ -150,7 +152,6 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
               const Divider(
                 thickness: 2.0,
               ),
-
               SizedBox(
                 height: 20.0.h,
               ),
@@ -192,7 +193,6 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
               SizedBox(
                 height: 20.0.h,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -269,7 +269,6 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
               SizedBox(
                 height: 20.0.h,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -308,7 +307,6 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
               SizedBox(
                 height: 20.0.h,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -344,7 +342,6 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
               const Divider(
                 thickness: 2.0,
               ),
-
             ],
           ),
         ),

@@ -118,8 +118,14 @@ class _ReviewScreenState extends State<ReviewScreen> {
                                       color: AppColor.primaryColor,
                                     ),
                                   ),
-                                  SizedBox(height: 20.0.h,),
-                                  const Text("We will keep you posted about the status of your loan application.",style: TextStyle(color: AppColor.primaryColor),),
+                                  SizedBox(
+                                    height: 20.0.h,
+                                  ),
+                                  const Text(
+                                    "We will keep you posted about the status of your loan application.",
+                                    style:
+                                        TextStyle(color: AppColor.primaryColor),
+                                  ),
                                 ],
                               ),
                             ),
@@ -140,15 +146,15 @@ class _ReviewScreenState extends State<ReviewScreen> {
                                         height: 37.h,
                                         decoration: BoxDecoration(
                                             borderRadius:
-                                            BorderRadius.circular(12.0).r,
+                                                BorderRadius.circular(12.0).r,
                                             color: AppColor.primaryColor),
                                         child: const Center(
                                             child: Text(
-                                              "Cancel",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold),
-                                            ))),
+                                          "Cancel",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ))),
                                     Container(
                                         width: 99.w,
                                         height: 37.h,

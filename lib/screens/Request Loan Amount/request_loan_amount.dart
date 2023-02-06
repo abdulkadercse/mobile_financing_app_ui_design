@@ -34,7 +34,7 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                       clipper: ClipPathClass(),
                       child: SizedBox(
                           width: double.infinity,
-                          height: MediaQuery.of(context).size.height / 2.50,
+                          height: MediaQuery.of(context).size.height / 2,
                           child: Container(
                             color: AppColor.primaryColor,
                           )),
@@ -43,7 +43,7 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                   Padding(
                     padding: const EdgeInsets.only(
                             left: 20.0, right: 20.0, top: 10.0)
-                        .r,
+                        .w,
                     child: Positioned(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,13 +72,12 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                               boxShadow: const [
                                 BoxShadow(
                                     color: Colors.black54,
-                                    blurRadius: 15.0,
+                                    blurRadius: 5,
                                     offset: Offset(0.0, 0.75))
                               ],
                             ),
-                            child: const Icon(
-                              Icons.menu_rounded,
-                              color: AppColor.primaryColor,
+                            child: Image.asset(
+                              "assets/menu-bar.png",
                             ),
                           ),
                         ],
@@ -90,13 +89,13 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                       left: 20,
                       right: 20,
                       child: Container(
-                        height: 128,
+                        height: 128.h,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0).r,
                           color: Colors.white,
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0).w,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -166,12 +165,12 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                         ),
                       )),
                   Positioned(
-                    bottom: -110.0,
+                    bottom: -50,
                     left: 20.0,
                     right: 20.0,
                     child: Container(
-                        height: 164,
-                        width: 327,
+                        height: 164.h,
+                        width: 327.w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0).r,
                           color: Colors.white,
@@ -220,7 +219,7 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                                             BorderRadius.circular(20.0).r,
                                         color: AppColor.primaryColor),
                                     child: const Icon(
-                                      Icons.add,
+                                      Icons.remove,
                                       color: Colors.white,
                                     ),
                                   ),
@@ -245,7 +244,7 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                                 ],
                               ),
                               SizedBox(
-                                height: 20.0.h,
+                                height: 10.0.h,
                               ),
                               Slider(
                                   activeColor: AppColor.primaryColor,
@@ -265,7 +264,7 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                 ],
               ),
               SizedBox(
-                height: 150.0.h,
+                height: 80.0.h,
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0).w,
@@ -341,7 +340,8 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                       buttonText: 'Proceed',
                       buttonDecoration: buttonDecoration,
                       buttonTextColor: Colors.white,
-                      onPressed: ()=>const UserInformationScreen().launch(context),
+                      onPressed: () =>
+                          const UserInformationScreen().launch(context),
                     ),
                     SizedBox(
                       height: 10.0.h,
@@ -355,7 +355,7 @@ class _RequestLoanAmountState extends State<RequestLoanAmount> {
                         fontWeight: FontWeight.bold,
                         decoration: TextDecoration.underline,
                       ),
-                    )).onTap(()=>finish(context)),
+                    )).onTap(() => finish(context)),
                   ],
                 ),
               )

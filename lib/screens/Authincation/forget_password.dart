@@ -33,7 +33,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           Navigator.pop(context);
         }),
 
-        title: const Text("Forgot Password",style: TextStyle(color: Colors.black),),centerTitle: true,),
+        title: const Text("Forget Password",style: TextStyle(color: Colors.black),),centerTitle: true,),
+
+
+
       body: Padding(
         padding: const EdgeInsets.all(10.0).w,
         child: Column(
@@ -41,7 +44,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
-            Lottie.asset('assets/forgotpassword.json'),
+            Center(child: Lottie.asset('assets/forgetpassword.json')),
 
             AppTextField(
               textFieldType: TextFieldType.EMAIL,
@@ -52,7 +55,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
              SizedBox(height: 10.h,),
             CustomButton(
               onPressed: (){
-                ForgetPasswordOtp().launch(context);
+                const ForgetPasswordOtp().launch(context);
 
               },
               buttonText: 'Send',

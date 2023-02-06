@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mobile_financing_app_ui/const/app_color.dart';
 import 'package:mobile_financing_app_ui/widgets/small_button.dart';
 import 'package:nb_utils/nb_utils.dart';

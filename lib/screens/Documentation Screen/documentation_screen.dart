@@ -55,9 +55,14 @@ class _DocumentationScreenState extends State<DocumentationScreen> {
                 width: 258.w,
                 height: 67.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0).r,
-                  color: AppColor.primaryColor
-                ),child: Center(child: Icon(Icons.camera_alt_rounded,color: Colors.white,size: 40,)),
+                    borderRadius: BorderRadius.circular(10.0).r,
+                    color: AppColor.primaryColor),
+                child: Center(
+                    child: Icon(
+                  Icons.camera_alt_rounded,
+                  color: Colors.white,
+                  size: 40,
+                )),
               ),
               SizedBox(
                 height: 10.0.h,
@@ -66,7 +71,6 @@ class _DocumentationScreenState extends State<DocumentationScreen> {
                 "Use Camera",
                 style: TextStyle(color: AppColor.primaryColor, fontSize: 16.sp),
               ),
-
               SizedBox(
                 height: 20.0.h,
               ),
@@ -75,8 +79,13 @@ class _DocumentationScreenState extends State<DocumentationScreen> {
                 height: 67.h,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0).r,
-                    color: AppColor.primaryColor
-                ),child: Center(child: Icon(Icons.photo,color: Colors.white,size: 40,)),
+                    color: AppColor.primaryColor),
+                child: Center(
+                    child: Icon(
+                  Icons.photo,
+                  color: Colors.white,
+                  size: 40,
+                )),
               ),
               SizedBox(
                 height: 10.0.h,
@@ -90,9 +99,11 @@ class _DocumentationScreenState extends State<DocumentationScreen> {
               ),
               Container(
                 alignment: Alignment.center,
-                child: SmallButton(buttonText: 'Continue', onPressed: ()=>const ReviewScreen().launch(context),),
+                child: SmallButton(
+                  buttonText: 'Continue',
+                  onPressed: () => const ReviewScreen().launch(context),
+                ),
               )
-
             ],
           ),
         ),

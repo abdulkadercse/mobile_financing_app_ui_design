@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -55,7 +56,9 @@ class _ChangeEmailState extends State<ChangeEmail> {
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: Image.asset("assets/menu-bar.png",),
+              child: Image.asset(
+                "assets/menu-bar.png",
+              ),
             ),
           )
         ],
@@ -105,7 +108,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
                 height: 10.h,
               ),
               Text(
-                "Enter your email password",
+                "Enter your password",
                 style: TextStyle(
                     fontSize: 18.sp,
                     color: AppColor.primaryColor,
@@ -119,12 +122,16 @@ class _ChangeEmailState extends State<ChangeEmail> {
                 decoration: appTextDecoration.copyWith(
                     hintText: "********", prefixIcon: const Icon(Icons.lock)),
               ),
-              SizedBox(height: 20.0.h,),
+              SizedBox(
+                height: 20.0.h,
+              ),
               CustomButton(
                 buttonText: 'Save Email',
                 buttonDecoration: buttonDecoration,
                 buttonTextColor: Colors.white,
-                onPressed: null,
+                onPressed: () {
+                  EasyLoading.showSuccess('Success!');
+                },
               )
             ],
           ),

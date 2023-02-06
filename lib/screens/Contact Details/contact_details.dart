@@ -21,69 +21,132 @@ class _ContactDetailsState extends State<ContactDetails> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 10.0,top: 20.0,right: 10.0),
+            padding: const EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children:  [
-                Center(child: Text("Application Form",style: TextStyle(fontWeight: FontWeight.bold,color: AppColor.primaryColor,fontSize: 25.sp),)),
+              children: [
+                Center(
+                    child: Text(
+                  "Application Form",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.primaryColor,
+                      fontSize: 25.sp),
+                )),
                 SizedBox(
                   height: 20.0.h,
                 ),
-                Text("Contact Details:",style: TextStyle(color: AppColor.primaryColor,fontWeight: FontWeight.bold,fontSize: 16.sp),),
-                SizedBox(height: 20.0.h,),
-                Text("Email",style: TextStyle(color: AppColor.primaryColor,fontSize: 14.0.sp,fontWeight: FontWeight.bold),),
-                SizedBox(height: 5.0.h,),
+                Text(
+                  "Contact Details:",
+                  style: TextStyle(
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.sp),
+                ),
+                SizedBox(
+                  height: 20.0.h,
+                ),
+                Text(
+                  "Email",
+                  style: TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize: 14.0.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 5.0.h,
+                ),
                 AppTextField(
                   textFieldType: TextFieldType.NAME,
                   decoration: appTextDecoration.copyWith(
                     hintText: "Enter your email address",
                   ),
                 ),
-
-
-                SizedBox(height: 5.0.h,),
-                Text("Mobile Number",style: TextStyle(color: AppColor.primaryColor,fontSize: 14.0.sp,fontWeight: FontWeight.bold),),
-                SizedBox(height: 5.0.h,),
+                SizedBox(
+                  height: 5.0.h,
+                ),
+                Text(
+                  "Mobile Number",
+                  style: TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize: 14.0.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 5.0.h,
+                ),
                 AppTextField(
                   textFieldType: TextFieldType.NAME,
                   decoration: appTextDecoration.copyWith(
                     hintText: "Enter your Mobile Number",
                   ),
                 ),
-
-
-                SizedBox(height: 5.0.h,),
-                Text("Landline Number",style: TextStyle(color: AppColor.primaryColor,fontSize: 14.0.sp,fontWeight: FontWeight.bold),),
-                SizedBox(height: 5.0.h,),
+                SizedBox(
+                  height: 5.0.h,
+                ),
+                Text(
+                  "Landline Number",
+                  style: TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize: 14.0.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 5.0.h,
+                ),
                 AppTextField(
                   textFieldType: TextFieldType.NAME,
                   decoration: appTextDecoration.copyWith(
                     hintText: "Enter your Landline Number",
                   ),
                 ),
-
-                SizedBox(height: 5.0.h,),
-                Text("Address 1",style: TextStyle(color: AppColor.primaryColor,fontSize: 14.0.sp,fontWeight: FontWeight.bold),),
-                SizedBox(height: 5.0.h,),
+                SizedBox(
+                  height: 5.0.h,
+                ),
+                Text(
+                  "Address 1",
+                  style: TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize: 14.0.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 5.0.h,
+                ),
                 AppTextField(
                   textFieldType: TextFieldType.NAME,
                   decoration: appTextDecoration.copyWith(
                     hintText: "Address 1",
                   ),
                 ),
-                SizedBox(height: 5.0.h,),
-                Text("Address 2",style: TextStyle(color: AppColor.primaryColor,fontSize: 14.0.sp,fontWeight: FontWeight.bold),),
-                SizedBox(height: 5.0.h,),
+                SizedBox(
+                  height: 5.0.h,
+                ),
+                Text(
+                  "Address 2",
+                  style: TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize: 14.0.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 5.0.h,
+                ),
                 AppTextField(
                   textFieldType: TextFieldType.NAME,
                   decoration: appTextDecoration.copyWith(
                     hintText: "Address 2",
                   ),
                 ),
-                SizedBox(height: 20.0.h,),
+                SizedBox(
+                  height: 20.0.h,
+                ),
                 Container(
                   alignment: Alignment.center,
-                  child: SmallButton(buttonText: 'Continue', onPressed: ()=>const EmployementScreen().launch(context),),
+                  child: SmallButton(
+                    buttonText: 'Continue',
+                    onPressed: () => const EmployementScreen().launch(context),
+                  ),
                 )
               ],
             ),

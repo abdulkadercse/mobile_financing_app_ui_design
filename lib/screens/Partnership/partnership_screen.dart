@@ -31,7 +31,7 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
               Navigator.pop(context);
             },
             child: Padding(
-              padding:  const EdgeInsets.only(left: 10.0).w,
+              padding: const EdgeInsets.only(left: 10.0).w,
               child: const Icon(
                 Icons.arrow_back_ios,
                 color: AppColor.primaryColor,
@@ -53,7 +53,9 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                       offset: Offset(0.0, 0.75))
                 ],
               ),
-              child: Image.asset("assets/menu-bar.png",),
+              child: Image.asset(
+                "assets/menu-bar.png",
+              ),
             ),
           )
         ],
@@ -141,7 +143,8 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                                       .spaceBetween,
                                               children: [
                                                 const Text("Partner ID"),
-                                                const Icon(Icons.close).onTap(() {
+                                                const Icon(Icons.close)
+                                                    .onTap(() {
                                                   finish(context);
                                                 })
                                               ],
@@ -274,10 +277,10 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                      "Request Loan",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 11),
-                                    )),
+                                  "Request Loan",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                )),
                               ).onTap(() {
                                 showDialog(
                                     context: context,
@@ -287,11 +290,12 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                           children: [
                                             Row(
                                               mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 const Text("Partner ID"),
-                                                const Icon(Icons.close).onTap(() {
+                                                const Icon(Icons.close)
+                                                    .onTap(() {
                                                   finish(context);
                                                 })
                                               ],
@@ -313,33 +317,33 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 const Text(
                                                   "Action",
                                                   style: TextStyle(
                                                       fontWeight:
-                                                      FontWeight.bold),
+                                                          FontWeight.bold),
                                                 ),
                                                 Container(
                                                   width: 73.w,
                                                   height: 37.h,
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0)
-                                                          .r,
+                                                          BorderRadius.circular(
+                                                                  12.0)
+                                                              .r,
                                                       color: AppColor
                                                           .primaryColor),
                                                   child: const Center(
                                                       child: Text(
-                                                        "Continue",
-                                                        style: TextStyle(
-                                                            color: Colors.white,
-                                                            fontWeight:
+                                                    "Continue",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontWeight:
                                                             FontWeight.bold),
-                                                      )).onTap(() =>
+                                                  )).onTap(() =>
                                                       const RequestLoanAmount()
                                                           .launch(context)),
                                                 )
@@ -360,10 +364,10 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                      "Quote",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 11),
-                                    )),
+                                  "Quote",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                )),
                               ),
                             ],
                           )
@@ -424,10 +428,10 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                      "Request Loan",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 11),
-                                    )),
+                                  "Request Loan",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                )),
                               ).onTap(() {
                                 showDialog(
                                     context: context,
@@ -437,11 +441,12 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                           children: [
                                             Row(
                                               mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 const Text("Partner ID"),
-                                                const Icon(Icons.close).onTap(() {
+                                                const Icon(Icons.close)
+                                                    .onTap(() {
                                                   finish(context);
                                                 })
                                               ],
@@ -463,33 +468,33 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 const Text(
                                                   "Action",
                                                   style: TextStyle(
                                                       fontWeight:
-                                                      FontWeight.bold),
+                                                          FontWeight.bold),
                                                 ),
                                                 Container(
                                                   width: 73.w,
                                                   height: 37.h,
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0)
-                                                          .r,
+                                                          BorderRadius.circular(
+                                                                  12.0)
+                                                              .r,
                                                       color: AppColor
                                                           .primaryColor),
                                                   child: const Center(
                                                       child: Text(
-                                                        "Continue",
-                                                        style: TextStyle(
-                                                            color: Colors.white,
-                                                            fontWeight:
+                                                    "Continue",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontWeight:
                                                             FontWeight.bold),
-                                                      )).onTap(() =>
+                                                  )).onTap(() =>
                                                       const RequestLoanAmount()
                                                           .launch(context)),
                                                 )
@@ -510,10 +515,10 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                      "Quote",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 11),
-                                    )),
+                                  "Quote",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                )),
                               ),
                             ],
                           )
@@ -574,10 +579,10 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                      "Request Loan",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 11),
-                                    )),
+                                  "Request Loan",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                )),
                               ).onTap(() {
                                 showDialog(
                                     context: context,
@@ -587,11 +592,12 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                           children: [
                                             Row(
                                               mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 const Text("Partner ID"),
-                                                const Icon(Icons.close).onTap(() {
+                                                const Icon(Icons.close)
+                                                    .onTap(() {
                                                   finish(context);
                                                 })
                                               ],
@@ -613,33 +619,33 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
                                               mainAxisAlignment:
-                                              MainAxisAlignment
-                                                  .spaceBetween,
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
                                               children: [
                                                 const Text(
                                                   "Action",
                                                   style: TextStyle(
                                                       fontWeight:
-                                                      FontWeight.bold),
+                                                          FontWeight.bold),
                                                 ),
                                                 Container(
                                                   width: 73.w,
                                                   height: 37.h,
                                                   decoration: BoxDecoration(
                                                       borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0)
-                                                          .r,
+                                                          BorderRadius.circular(
+                                                                  12.0)
+                                                              .r,
                                                       color: AppColor
                                                           .primaryColor),
                                                   child: const Center(
                                                       child: Text(
-                                                        "Continue",
-                                                        style: TextStyle(
-                                                            color: Colors.white,
-                                                            fontWeight:
+                                                    "Continue",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontWeight:
                                                             FontWeight.bold),
-                                                      )).onTap(() =>
+                                                  )).onTap(() =>
                                                       const RequestLoanAmount()
                                                           .launch(context)),
                                                 )
@@ -660,10 +666,10 @@ class _PartnershipScreenState extends State<PartnershipScreen> {
                                 ),
                                 child: const Center(
                                     child: Text(
-                                      "Quote",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 11),
-                                    )),
+                                  "Quote",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                )),
                               ),
                             ],
                           )

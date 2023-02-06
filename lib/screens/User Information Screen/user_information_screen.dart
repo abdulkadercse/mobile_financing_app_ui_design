@@ -15,7 +15,6 @@ class UserInformationScreen extends StatefulWidget {
 }
 
 class _UserInformationScreenState extends State<UserInformationScreen> {
-
   List<String> maritalStatus = ['Single', 'Married'];
   String initialMaritalStatus = 'Single';
 
@@ -109,7 +108,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 const Text(
                   "Date of birth",
                   style: TextStyle(
-                      color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 5.0.h,
@@ -138,19 +138,21 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 SizedBox(
                   height: 10.0.h,
                 ),
-                 Text(
+                Text(
                   "Personal Info:",
                   style: TextStyle(
-                      color: AppColor.primaryColor, fontWeight: FontWeight.bold,fontSize: 16.sp),
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.sp),
                 ),
                 SizedBox(
                   height: 20.0.h,
                 ),
-
                 const Text(
                   "First Name",
                   style: TextStyle(
-                      color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 5.0.h,
@@ -167,9 +169,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 const Text(
                   "Last Name",
                   style: TextStyle(
-                      color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold),
                 ),
-
                 SizedBox(
                   height: 5.0.h,
                 ),
@@ -185,9 +187,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 const Text(
                   "Middle Name",
                   style: TextStyle(
-                      color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold),
                 ),
-
                 SizedBox(
                   height: 5.0.h,
                 ),
@@ -197,16 +199,15 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                     hintText: "Middle Name",
                   ),
                 ),
-
                 SizedBox(
                   height: 5.0.h,
                 ),
                 const Text(
                   "Marital Status",
                   style: TextStyle(
-                      color: AppColor.primaryColor, fontWeight: FontWeight.bold),
+                      color: AppColor.primaryColor,
+                      fontWeight: FontWeight.bold),
                 ),
-
                 SizedBox(
                   height: 5.0.h,
                 ),
@@ -220,7 +221,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                     height: 55,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 5.0),
-                      child: DropdownButtonHideUnderline(child: getMaritalStatus()),
+                      child: DropdownButtonHideUnderline(
+                          child: getMaritalStatus()),
                     ),
                   ),
                 ),
@@ -229,7 +231,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  child: SmallButton(buttonText: 'Continue', onPressed: ()=>const ContactDetails().launch(context),),
+                  child: SmallButton(
+                    buttonText: 'Continue',
+                    onPressed: () => const ContactDetails().launch(context),
+                  ),
                 )
               ],
             ),

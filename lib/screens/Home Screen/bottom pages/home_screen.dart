@@ -161,7 +161,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                           color: const Color(0xff100D40)),
                                     )
                                   ],
-                                ).onTap(()=>const BillPaymentScreen().launch(context)),
+                                ).onTap(() =>
+                                    const BillPaymentScreen().launch(context)),
                                 Column(
                                   children: [
                                     GestureDetector(
@@ -188,14 +189,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Column(
                                   children: [
                                     Container(
-                                            width: 44.w,
-                                            height: 44.h,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10).r,
-                                                color: const Color(0xff0B0657)),
-                                            child: const Icon(Icons.payment,
-                                                color: Colors.white)),
+                                        width: 44.w,
+                                        height: 44.h,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10).r,
+                                            color: const Color(0xff0B0657)),
+                                        child: const Icon(Icons.payment,
+                                            color: Colors.white)),
                                     Text(
                                       "BillPay",
                                       style: TextStyle(
@@ -203,7 +204,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                           color: const Color(0xff100D40)),
                                     )
                                   ],
-                                ).onTap(()=> const BillPaymentScreen().launch(context)),
+                                ).onTap(() =>
+                                    const BillPaymentScreen().launch(context)),
                               ],
                             )
                           ],

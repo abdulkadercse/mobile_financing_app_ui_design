@@ -16,7 +16,6 @@ class EmployementScreen extends StatefulWidget {
 }
 
 class EmployementScreenState extends State<EmployementScreen> {
-
   List<String> employmentStatus = ['Permanent', 'Part Time'];
   String initialEmploymentStatus = 'Permanent';
 
@@ -49,11 +48,24 @@ class EmployementScreenState extends State<EmployementScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Text("Application Form",style: TextStyle(fontWeight: FontWeight.bold,color: AppColor.primaryColor,fontSize: 25.sp),)),
+              Center(
+                  child: Text(
+                "Application Form",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: AppColor.primaryColor,
+                    fontSize: 25.sp),
+              )),
               SizedBox(
                 height: 20.0.h,
               ),
-              Text("Contact Details:",style: TextStyle(color: AppColor.primaryColor,fontWeight: FontWeight.bold,fontSize: 16.sp),),
+              Text(
+                "Contact Details:",
+                style: TextStyle(
+                    color: AppColor.primaryColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.sp),
+              ),
               SizedBox(
                 height: 10.0.h,
               ),
@@ -67,7 +79,8 @@ class EmployementScreenState extends State<EmployementScreen> {
                   height: 55,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 5.0),
-                    child: DropdownButtonHideUnderline(child: getEmploymentStatus()),
+                    child: DropdownButtonHideUnderline(
+                        child: getEmploymentStatus()),
                   ),
                 ),
               ),
@@ -77,8 +90,7 @@ class EmployementScreenState extends State<EmployementScreen> {
               const Text(
                 "Desigantion & Psotion ",
                 style: TextStyle(
-                    color: AppColor.primaryColor,
-                    fontWeight: FontWeight.bold),
+                    color: AppColor.primaryColor, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 5.0.h,
@@ -89,12 +101,16 @@ class EmployementScreenState extends State<EmployementScreen> {
                   hintText: "Security Officer",
                 ),
               ),
-              SizedBox(height: 30.0.h,),
+              SizedBox(
+                height: 30.0.h,
+              ),
               Container(
                 alignment: Alignment.center,
-                child: SmallButton(buttonText: 'Continue', onPressed: ()=>const PaymentScreen().launch(context),),
+                child: SmallButton(
+                  buttonText: 'Continue',
+                  onPressed: () => const PaymentScreen().launch(context),
+                ),
               )
-
             ],
           ),
         ),
